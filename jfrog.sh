@@ -1,10 +1,7 @@
 sudo apt update
 wget -O artifactory-pro.deb "https://releases.jfrog.io/artifactory/artifactory-pro-debs/pool/jfrog-artifactory-pro/jfrog-artifactory-pro-[RELEASE].deb"
 sudo apt install ./artifactory-pro.deb -y
-
-
-
-apt-get install nginx -y
+sudo apt-get install nginx -y
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo rm -rf /etc/nginx/sites-available/default
 sudo touch /etc/nginx/sites-available/jfrog
