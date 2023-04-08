@@ -31,7 +31,7 @@ server{
 }
 EOT'
 #Create symbolic link
-ln -s /etc/nginx/sites-available/jfrog /etc/nginx/sites-enabled/jfrog
+sudo ln -s /etc/nginx/sites-available/jfrog /etc/nginx/sites-enabled/jfrog
 
 #Start Artifactory 
 sudo systemctl enable nginx.service
