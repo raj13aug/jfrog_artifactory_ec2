@@ -1,6 +1,10 @@
+#Update Ubuntu OS
 sudo apt update
+#Download Artifactory 
 wget -O artifactory-pro.deb "https://releases.jfrog.io/artifactory/artifactory-pro-debs/pool/jfrog-artifactory-pro/jfrog-artifactory-pro-[RELEASE].deb"
+#Install Artifactory
 sudo apt install ./artifactory-pro.deb -y
+##Install nginx
 sudo apt-get install nginx -y
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo rm -rf /etc/nginx/sites-available/default
@@ -25,8 +29,10 @@ server{
     }
 }
 EOT'
+#Create symbolic link
 ln -s /etc/nginx/sites-available/jfrog /etc/nginx/sites-enabled/jfrog
 
+#Start Artifactory 
 sudo systemctl enable nginx.service
 sudo systemctl restart nginx.service
 sudo systemctl restart artifactory.service
