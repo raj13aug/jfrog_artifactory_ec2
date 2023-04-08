@@ -12,9 +12,9 @@ sudo touch /etc/nginx/sites-available/jfrog
 sudo bash -c 'sudo cat <<EOT> /etc/nginx/sites-available/jfrog
 server{
     listen      80;
-    server_name sonar.robofarming.link;
-    access_log  /var/log/nginx/sonar.access.log;
-    error_log   /var/log/nginx/sonar.error.log;
+    server_name jfrog.robofarming.link;
+    access_log  /var/log/nginx/jfrog.access.log;
+    error_log   /var/log/nginx/jfrog.error.log;
     proxy_buffers 16 64k;
     proxy_buffer_size 128k;
     location / {
