@@ -1,3 +1,4 @@
+#!/bin/sh
 #Update Ubuntu OS
 sudo apt update
 #Download Artifactory 
